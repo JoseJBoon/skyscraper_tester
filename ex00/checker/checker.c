@@ -6,7 +6,7 @@
 /*   By: jboon <jboon@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/06/15 09:40:10 by jboon         #+#    #+#                 */
-/*   Updated: 2025/06/15 20:34:34 by jboon         ########   odam.nl         */
+/*   Updated: 2025/06/15 20:50:43 by jboon         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "rush01.h"
 #include "checker.h"
 
-bool	is_output_error(void)
+static bool	is_output_error(void)
 {
 	char	buffer[BUF_N];
 
@@ -28,7 +28,7 @@ bool	is_output_error(void)
 	return (false);
 }
 
-bool	validate_sequence(t_skyscraper *sky, int *err_x, int *err_y)
+static bool	validate_sequence(t_skyscraper *sky, int *err_x, int *err_y)
 {
 	int	y;
 	int	x;
@@ -50,7 +50,7 @@ bool	validate_sequence(t_skyscraper *sky, int *err_x, int *err_y)
 	return (true);
 }
 
-bool	validate_with_clues(t_skyscraper *sky, int *err_x, int *err_y)
+static bool	validate_with_clues(t_skyscraper *sky, int *err_x, int *err_y)
 {
 	int	y;
 	int	x;
@@ -72,7 +72,7 @@ bool	validate_with_clues(t_skyscraper *sky, int *err_x, int *err_y)
 	return (true);
 }
 
-bool	validate_solution(t_skyscraper *sky)
+static bool	validate_solution(t_skyscraper *sky)
 {
 	int	err_x;
 	int	err_y;
