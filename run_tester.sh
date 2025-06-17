@@ -36,4 +36,4 @@ test_skyscrapper() {
 
 test_skyscrapper "Test valid 4x4 puzzles:\n" "4x4s.txt"
 test_skyscrapper "Test invalid inputs:\n" "invalidInput.txt"
-# test_skyscrapper "Test bonus inputs:\n" "bonusInput.txt"
+test_skyscrapper "Test bonus inputs:\n" "bonusInput.txt"
